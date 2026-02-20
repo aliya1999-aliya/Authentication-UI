@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" class="form active">
+            <h2>Welcome Back</h2>
+
+            <div class="input-group">
+                <input type="email" id="loginEmail" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="loginPassword" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <p class="toggle-text">
+                Don't have an account?
+                <span onclick="switchToSignUp()">Sign Up</span>
+            </p>
+
+            <div class="social-login">
+                <button type="button" class="google-btn" onclick="googleLogin()">Login with Google</button>
+                <button type="button" class="facebook-btn" onclick="facebookLogin()">Login with Facebook</button>
+            </div>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form id="signupForm" class="form">
+            <h2>Create Account</h2>
+
+            <div class="input-group">
+                <input type="text" id="signupName" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="signupEmail" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="signupPassword" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+
+            <p class="toggle-text">
+                Already have an account?
+                <span onclick="switchToLogin()">Login</span>
+            </p>
+
+            <div class="social-login">
+                <button type="button" class="google-btn" onclick="googleLogin()">Continue with Google</button>
+                <button type="button" class="facebook-btn" onclick="facebookLogin()">Continue with Facebook</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Firebase v8 SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
